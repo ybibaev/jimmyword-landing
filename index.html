@@ -84,12 +84,29 @@
 
       gtag('config', 'G-F8RQH44NGE');
     </script>
+    <script>
+      document.getElementById('btn-start')
+        .addEventListener('click', () => {
+          gtag('event', 'cta_click', {
+            event_category: 'engagement',
+            event_label: 'start_button'
+          });
+        });
+
+      document.getElementById('btn-join')
+        .addEventListener('click', () => {
+          gtag('event', 'cta_click', {
+            event_category: 'engagement',
+            event_label: 'join_button'
+          });
+        });
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>Jimmy Word 👋</h1>
         <p>Expand your English vocabulary effortlessly with your personal Telegram bot.</p>
-        <a href="https://t.me/JimmyWordBot" class="btn">👉 Start Chatting Now</a>
+        <a href="https://t.me/JimmyWordBot" id="btn-start" class="btn">👉 Start Chatting Now</a>
 
         <div class="features">
             <h2>How Jimmy Helps You:</h2>
@@ -103,7 +120,7 @@
             </ul>
         </div>
 
-        <a href="https://t.me/JimmyWordBot" class="btn">👉 Join Jimmy Today</a>
+        <a href="https://t.me/JimmyWordBot" id="btn-join" class="btn">👉 Join Jimmy Today</a>
 
         <div class="footer">
             &copy; 2025 Jimmy Word | <a href="https://jimmyword.com">jimmyword.com</a><br>
