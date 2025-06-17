@@ -84,23 +84,6 @@
 
       gtag('config', 'G-F8RQH44NGE');
     </script>
-    <script>
-      document.getElementById('btn-start')
-        .addEventListener('click', () => {
-          gtag('event', 'cta_click', {
-            event_category: 'engagement',
-            event_label: 'start_button'
-          });
-        });
-
-      document.getElementById('btn-join')
-        .addEventListener('click', () => {
-          gtag('event', 'cta_click', {
-            event_category: 'engagement',
-            event_label: 'join_button'
-          });
-        });
-    </script>
 </head>
 <body>
     <div class="container">
@@ -127,5 +110,20 @@
             Follow us on Telegram: <a href="https://t.me/jimmyword">@jimmyword</a>
         </div>
     </div>
+    <script>
+      document.getElementById('btn-start').addEventListener('click', () => {
+        gtag('event', 'cta_click', {
+          event_category: 'engagement',
+          event_label: 'start_button'
+        });
+      });
+
+      document.getElementById('btn-join').addEventListener('click', () => {
+        gtag('event', 'cta_click', {
+          event_category: 'engagement',
+          event_label: 'join_button'
+        });
+      });
+    </script>
 </body>
 </html>
